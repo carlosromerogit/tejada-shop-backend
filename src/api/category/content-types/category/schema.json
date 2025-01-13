@@ -16,16 +16,17 @@
       "type": "string"
     },
     "slug": {
-      "type": "uid"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "category"
+      "type": "uid",
+      "targetField": "name"
     },
     "description": {
       "type": "text"
+    },
+    "stock_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::stock-product.stock-product",
+      "mappedBy": "category"
     }
   }
 }

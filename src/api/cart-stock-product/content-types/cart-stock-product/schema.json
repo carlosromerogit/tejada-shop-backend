@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cart_stock_products",
+  "info": {
+    "singularName": "cart-stock-product",
+    "pluralName": "cart-stock-products",
+    "displayName": "cart-stock-product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "cart_stock_products"
+    },
+    "stock_product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::stock-product.stock-product",
+      "inversedBy": "cart_stock_products"
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 1,
+      "min": 0
+    }
+  }
+}
