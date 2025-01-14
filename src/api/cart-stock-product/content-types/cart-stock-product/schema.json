@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "cart": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::cart.cart",
-      "inversedBy": "cart_stock_products"
-    },
     "stock_product": {
       "type": "relation",
       "relation": "manyToOne",
@@ -28,6 +22,12 @@
       "type": "integer",
       "default": 1,
       "min": 0
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "cart_stock_products"
     }
   }
 }

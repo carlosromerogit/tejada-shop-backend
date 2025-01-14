@@ -30,6 +30,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cart.cart"
+    },
+    "bill": {
+      "type": "decimal",
+      "required": false,
+      "default": 0
     }
   }
 }
